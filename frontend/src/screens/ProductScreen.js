@@ -6,7 +6,10 @@ import Rating from '../components/Rating'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import Meta from '../components/Meta'
-import { listProductDetails, createProductReview } from '../actions/productActions'
+import {
+  listProductDetails,
+  createProductReview,
+} from '../actions/productActions'
 import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants'
 
 const ProductScreen = ({ history, match }) => {
@@ -111,7 +114,7 @@ const ProductScreen = ({ history, match }) => {
                   {product.countInStock > 0 && (
                     <ListGroup.Item>
                       <Row>
-                        <Col>Gallons</Col>
+                        <Col>Qty</Col>
                         <Col>
                           <Form.Control
                             as='select'
@@ -136,7 +139,8 @@ const ProductScreen = ({ history, match }) => {
                       onClick={addToCartHandler}
                       className='btn-block'
                       type='button'
-                      disabled={product.countInStock === 0}>
+                      disabled={product.countInStock === 0}
+                    >
                       Add To Cart
                     </Button>
                   </ListGroup.Item>

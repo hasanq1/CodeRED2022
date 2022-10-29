@@ -24,7 +24,7 @@ const orderSchema = mongoose.Schema(
       address: { type: String, required: true },
       city: { type: String, required: true },
       postalCode: { type: String, required: true },
-      states: { type: String, required: true },
+      country: { type: String, required: true },
     },
     paymentMethod: {
       type: String,
@@ -36,7 +36,7 @@ const orderSchema = mongoose.Schema(
       update_time: { type: String },
       email_address: { type: String },
     },
-    orderbefore: {
+    taxPrice: {
       type: Number,
       required: true,
       default: 0.0,
@@ -49,31 +49,6 @@ const orderSchema = mongoose.Schema(
     totalPrice: {
       type: Number,
       required: true,
-      default: 0.0,
-    },
-    Quantity: {
-      type: Number,
-      required: true,
-      default: 0.0,
-    },
-    Companys: {
-      type: Number,
-      required: true,
-      default: 0.0,
-    },
-    Margin: {
-      type: Number,
-      required: true,
-      default: 0.0,
-        },
-    Suggested: {
-      type: Number,
-      required: true,
-      default: 0.0,
-    },
-    TaxPrice: {
-      type: Number,
-      required: false,
       default: 0.0,
     },
     isPaid: {

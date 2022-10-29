@@ -37,9 +37,9 @@ const UserListScreen = ({ history }) => {
       <h1>Users</h1>
       {loading ? (
         <Loader />
-      ): error ?(
+      ) : error ? (
         <Message variant='danger'>{error}</Message>
-      ):(
+      ) : (
         <Table striped bordered hover responsive className='table-sm'>
           <thead>
             <tr>
@@ -74,7 +74,8 @@ const UserListScreen = ({ history }) => {
                   <Button
                     variant='danger'
                     className='btn-sm'
-                    onClick={() => deleteHandler(user._id)}>
+                    onClick={() => deleteHandler(user._id)}
+                  >
                     <i className='fas fa-trash'></i>
                   </Button>
                 </td>

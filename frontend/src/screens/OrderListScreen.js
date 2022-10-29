@@ -26,11 +26,11 @@ const OrderListScreen = ({ history }) => {
   return (
     <>
       <h1>Orders</h1>
-      {loading ?(
+      {loading ? (
         <Loader />
-      ): error ?(
+      ) : error ? (
         <Message variant='danger'>{error}</Message>
-      ):(
+      ) : (
         <Table striped bordered hover responsive className='table-sm'>
           <thead>
             <tr>
@@ -44,7 +44,7 @@ const OrderListScreen = ({ history }) => {
             </tr>
           </thead>
           <tbody>
-            {orders.map((order) =>(
+            {orders.map((order) => (
               <tr key={order._id}>
                 <td>{order._id}</td>
                 <td>{order.user && order.user.name}</td>

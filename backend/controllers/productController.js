@@ -157,4 +157,12 @@ const getTopProducts = asyncHandler(async (req, res) => {
   res.json(products)
 })
 
-export { getProducts, getProductById, deleteProduct, createProduct, updateProduct, createProductReview, getTopProducts }
+export {
+  getProducts,
+  getProductById,
+  deleteProduct,
+  createProduct,
+  updateProduct,
+  createProductReview,
+  getTopProducts,
+}

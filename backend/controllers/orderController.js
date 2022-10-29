@@ -10,14 +10,9 @@ const addOrderItems = asyncHandler(async (req, res) => {
     shippingAddress,
     paymentMethod,
     itemsPrice,
+    taxPrice,
     shippingPrice,
-    orderbefore,
     totalPrice,
-    Quantity,
-    Companys,
-    Margin, 
-    Suggested,
-    TaxPrice
   } = req.body
 
   if (orderItems && orderItems.length === 0) {
@@ -31,14 +26,9 @@ const addOrderItems = asyncHandler(async (req, res) => {
       shippingAddress,
       paymentMethod,
       itemsPrice,
+      taxPrice,
       shippingPrice,
-      orderbefore,
       totalPrice,
-      Quantity,
-      Companys,
-      Margin, 
-      Suggested,
-      TaxPrice
     })
 
     const createdOrder = await order.save()
@@ -124,4 +114,11 @@ const getOrders = asyncHandler(async (req, res) => {
   res.json(orders)
 })
 
-export { addOrderItems, getOrderById, updateOrderToPaid, updateOrderToDelivered, getMyOrders, getOrders }
+export {
+  addOrderItems,
+  getOrderById,
+  updateOrderToPaid,
+  updateOrderToDelivered,
+  getMyOrders,
+  getOrders,
+}

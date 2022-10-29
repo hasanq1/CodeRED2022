@@ -86,7 +86,7 @@ const ProductEditScreen = ({ match, history }) => {
         brand,
         category,
         description,
-        countInStock
+        countInStock,
       })
     )
   }
